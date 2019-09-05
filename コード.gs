@@ -10,6 +10,9 @@ function getBoard() {
  
   var cards = [];
   var maxRows = json.length;
+  
+  /*現時点ではリスト内全てのカードを取得している。
+  カード作成がトリガーになれば以下のfor文は不要*/
   for(var i =0; i<maxRows; i++){
   
     var name = json[i].name;
@@ -42,7 +45,6 @@ function getBoard() {
         "payload" : payload
       };
   UrlFetchApp.fetch(PostUrl,params);
-    
     
 
   //カレンダーに入力する。
